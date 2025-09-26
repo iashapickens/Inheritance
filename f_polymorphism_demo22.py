@@ -14,18 +14,29 @@ def main():
     print('Here are some animals and')
     print('the sounds they make.')
     print('--------------------------')
-    bear.show_species()
-    bear.make_sound()
+    show_mammal_info(bear)
+    print()
+    show_mammal_info(dog)
 
     print()
-
-    dog.show_species()
-    dog.make_sound()
+    show_mammal_info(cat)
 
     print()
+    show_mammal_info('bird')
 
-    cat.show_species()
-    cat.make_sound()
+def show_mammal_info(creature):
+        if isinstance(creature,animals.Mammal):
+            creature.show_species()
+            creature.make_sound()
+        else:
+             print('That is not a mammal!')
 
 # Call the main function.
 main()
+
+name = 1
+
+if isinstance(name, str):
+     print('This is a string')
+else:
+     print('This is not a string')
